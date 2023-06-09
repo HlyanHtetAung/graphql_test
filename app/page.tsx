@@ -1,21 +1,16 @@
-import useFetchAllTherapists from "./fetchRequests/useFetchAllTherapists";
+import AllTherapistsTable from './components/AllTherapistsTable';
+import useFetchAllTherapists from './fetchRequests/useFetchAllTherapists';
 
 export default async function Home() {
   const data = await useFetchAllTherapists();
-
+  console.log(data.data.allTherapists);
   return (
     <main>
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="font-bold uppercase text-[20px]">
+      <div className="flex flex-col p-[20px]">
+        <h1 className="font-bold uppercase text-[20px] text-center">
           Records:{data.data.allTherapists.length}
         </h1>
-        {data.data.allTherapists.map((therapists: any, index: any) => (
-          <div key={index}>
-            <div className="flex flex-col items-center gap-[20px]">
-              <p>{therapists.first_name}</p>
-            </div>
-          </div>
-        ))}
+        <AllTherapistsTable data={data.data.allTherapists} />
       </div>
     </main>
   );
