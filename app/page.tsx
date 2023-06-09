@@ -10,7 +10,7 @@ export default async function Home() {
           Records:{data.data.allTherapists.length}
         </h1>
         {data.data.allTherapists.map((therapists: any, index: any) => (
-          <div>
+          <div key={index}>
             <div className="flex flex-col items-center gap-[20px]">
               <p>{therapists.first_name}</p>
             </div>
