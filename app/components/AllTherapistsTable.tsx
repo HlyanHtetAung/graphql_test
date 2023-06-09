@@ -31,12 +31,8 @@ const AllTherapistsTable = ({ data }: AllTherapistsTableProps) => {
       style: {},
     },
   };
+
   const columns = [
-    {
-      name: 'No',
-      selector: (row: any, index: any) => index + 1,
-      width: '80px',
-    },
     {
       name: 'id',
       selector: (row: any) => row.id,

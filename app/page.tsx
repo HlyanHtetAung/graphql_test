@@ -3,7 +3,7 @@ import useFetchAllTherapists from './fetchRequests/useFetchAllTherapists';
 
 export default async function Home() {
   const data = await useFetchAllTherapists();
-  console.log(data.data.allTherapists);
+
   return (
     <main>
       <div className="flex flex-col p-[20px]">
