@@ -1,6 +1,6 @@
 const useFetchAllTherapists = async () => {
   const res = await fetch(
-    'http://13.214.209.115:3000/graphql',
+    'http://18.143.143.171:3000/graphql',
 
     {
       cache: 'no-store',
